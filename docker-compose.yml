@@ -18,7 +18,9 @@ services:
     volumes:
       # Mount the source code to allow live editing (optional, good for dev)
       - ./:/app
-    command: ["python", "scripts/run_pipeline.py"]
+    command: ["python", "api_server.py"]
+    ports:
+      - "8000:8000"
 
   # Service 2: PostgreSQL Database
   db:
