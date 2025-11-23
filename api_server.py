@@ -113,7 +113,6 @@ def generate_application(job_id: str, db: Session = Depends(get_session)):
             "skills": ["Python", "AWS", "Terraform"], 
             "experience": [{"action": "Built API", "context": "FastAPI", "result": "Fast"}]
         }
-    # --- FIX END ---
     
     # Run generation logic
     # Pass the projects from the profile if they exist
