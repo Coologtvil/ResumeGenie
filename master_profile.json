@@ -1,15 +1,57 @@
 {
-  "name": "Your Name",
-  "github_username": "yourgithub",
-  "skills": ["Python", "AWS", "Terraform", "SQL"],
+  "name": "Sahil Shindgikar",
+  "email": "sahilshindgikar@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/sahil-shindgikar-22ba9b2b8/",
+  "github_username": "Sahil0591",
+  "summary": "Aspiring Software Development Engineer with hands-on projects in Python, Java, C++, AI/ML and cloud. Interested in scalable systems and applied AI.",
+  "skills": [
+    "Python", "Java", "C++", "JavaScript", "TypeScript",
+    "Machine Learning", "Computer Vision", "Deep Learning Frameworks", "Logistic Regression",
+    "Supervised Learning", "Unsupervised Learning", "Visualization Techniques",
+    "AWS", "EC2", "Cloud Deployment", "Cloud Infrastructure", "Cloud Storage", "IAM Basics",
+    "SQL", "MySQL", "DynamoDB",
+    "CUDA", "GPU Computing", "Parallel Algorithms", "Threading", "Synchronization", "NVIDIA architecture",
+    "HTML5", "CSS3",
+    "Git", "GitHub", "VS Code", "Jupyter Notebook", "WSL", "Figma", "HeidiSQL", "Blender"
+  ],
   "years_experience": 5,
-  "work_auth": "Eligible in UAE and Remote EU",
+  "work_auth": "Eligible in UK; open to remote EU",
   "salary_expectation": "Negotiable",
   "experience": [
+    { "action": "Built", "context": "secure file encryption tool with PBKDF2, Fernet and key-splitting", "result": "Protected sensitive files and improved portability" },
+    { "action": "Implemented", "context": "face keypoint detection with Ridge regression and a CNN in PyTorch", "result": "Accurate landmark prediction on grayscale images" },
+    { "action": "Developed", "context": "Java TFTP client/server over UDP/TCP with multi-client support", "result": "Reliable file transfer in lab environment" },
+    { "action": "Designed", "context": "SimpleLang grammar and parser with ANTLR", "result": "Parsed custom language constructs and produced an AST" }
+  ],
+  "education": [
     {
-      "action": "Led migration",
-      "context": "Moved legacy services to AWS with Infrastructure as Code",
-      "result": "Reduced infra cost 30%"
+      "institution": "University of Sussex",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "location": "Brighton, England",
+      "startDate": "2023-09",
+      "endDate": "2027-05",
+      "gpa": "4.0/4.0 | First Class"
+    },
+    {
+      "institution": "PES University",
+      "degree": "Bachelor of Technology",
+      "field": "Computer Engineering",
+      "location": "Bangalore, India",
+      "startDate": "2022-09",
+      "endDate": "2023-05"
     }
+  ],
+  "certifications": [
+    { "name": "AWS Cloud Technical Essentials",
+      "issuer": "Amazon Web Services (AWS), Coursera",
+      "date": "2025-06",
+      "link": "https://www.coursera.org/account/accomplishments/verify/C3YCI8CHHD3N"
+    },
+    { "name": "Introduction to Parallel Programming with CUDA", "issuer": "The Johns Hopkins University, Coursera", "date": "2025-06", "link": "https://www.coursera.org/account/accomplishments/verify/CRPQY30R9U8C" },
+    { "name": "Introduction to Concurrent Programming with GPUs", "issuer": "The Johns Hopkins University, Coursera", "date": "2025-06", "link": "https://www.coursera.org/account/accomplishments/verify/YSDSWS0ZHXQT" },
+    { "name": "Unsupervised Learning, Recommenders, Reinforcement Learning", "issuer": "DeepLearning.AI, Coursera, Stanford CPD, UVM", "date": "2024-10", "link": "https://www.coursera.org/account/accomplishments/verify/WG2EZCYHS2OU" },
+    { "name": "Advanced Learning Algorithms", "issuer": "DeepLearning.AI, Coursera, Stanford CPD, UVM", "date": "2024-08", "link": "https://www.coursera.org/account/accomplishments/verify/PFCUO3JNTWH4" },
+    { "name": "Supervised Machine Learning: Regression and Classification", "issuer": "DeepLearning.AI, Coursera, Stanford CPD, UVM", "date": "2024-07", "link": "https://www.coursera.org/account/accomplishments/verify/5ZYEBTVX33KK" }
   ]
 }
