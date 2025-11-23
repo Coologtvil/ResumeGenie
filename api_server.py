@@ -1,3 +1,6 @@
+
+import json
+import os
 from fastapi import FastAPI, Depends, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
@@ -14,6 +17,36 @@ from agents.ghost_validator import validate_job
 from db.persist import upsert_jobs, save_application
 
 app = FastAPI(title="ResumeGenie API")
+
+# Profile file path
+PROFILE_PATH = os.path.join(os.path.dirname(__file__), "master_profile.json")
+
+# --- Profile Endpoints ---
+@app.get("/profile")
+def get_profile():
+    if not os.path.exists(PROFILE_PATH):
+        raise HTTPException(status_code=404, detail="Profile file not found")
+    try:
+        with open(PROFILE_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        # If file is empty or not a dict, return empty profile
+        if not isinstance(data, dict):
+            return {}
+        return data
+    except json.JSONDecodeError:
+        # If file is present but invalid JSON, return empty profile
+        return {}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to read profile")
+
+@app.post("/profile")
+def save_profile(profile: dict):
+    try:
+        with open(PROFILE_PATH, "w", encoding="utf-8") as f:
+            json.dump(profile, f, indent=2)
+        return {"status": "Profile saved"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to save profile")
 
 # Serve static files (PDFs, etc.) from project root
 from fastapi.staticfiles import StaticFiles

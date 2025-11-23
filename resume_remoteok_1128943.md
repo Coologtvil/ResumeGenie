@@ -7,6 +7,8 @@
 \usepackage{titlesec}
 \raggedright
 \pagestyle{empty}
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 \titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
@@ -14,34 +16,90 @@
 
 \begin{document}
 
-\centerline{\Huge Sahil Shindgikar}
+\begin{center}
+\Huge Jane Doe
+\end{center}
+
 \vspace{5pt}
 
-\centerline{\href{mailto:sahilshindgikar@gmail.com}{sahilshindgikar@gmail.com} | \href{https://www.linkedin.com/in/sahil-shindgikar-22ba9b2b8/}{linkedin.com/in/sahil-shindgikar-22ba9b2b8} | \href{https://github.com/Sahil0591}{github.com/Sahil0591}}
+\centerline{\href{mailto:jane.doe@gmail.com}{jane.doe@gmail.com} | \href{https://github.com/jane-doe}{github.com/jane-doe} | \href{https://www.linkedin.com/in/jane-doe}{linkedin.com/in/jane-doe}}
+
 \vspace{-10pt}
 
-\section*{Summary}
-Aspiring Software Development Engineer with hands-on projects in Python, Java, C++, AI/ML, and cloud technologies. Interested in scalable systems and applied AI.
+\section*{Skills}
+\textbf{Programming Languages:} Python, JavaScript, TypeScript \\
+\textbf{Frameworks:} React, Node.js, Express \\
+\textbf{Cloud Platforms:} AWS, Google Cloud Platform \\
+\textbf{DevOps:} Terraform, Docker, Kubernetes \\
+\textbf{Databases:} SQL, MongoDB \\
+\textbf{Other:} Git, Agile, Scrum
 
-\section*{Core Skills}
-Python, Java, C++, JavaScript, TypeScript, Machine Learning, Computer Vision, Deep Learning Frameworks, Logistic Regression, Supervised Learning, Unsupervised Learning, Visualization Techniques, AWS, EC2, Cloud Deployment, Cloud Infrastructure, Cloud Storage, IAM Basics, SQL, MySQL, DynamoDB, CUDA, GPU Computing, Parallel Algorithms, Threading, Synchronization, NVIDIA architecture, HTML5, CSS3, Git, GitHub, VS Code, Jupyter Notebook, WSL, Figma, HeidiSQL, Blender
+\vspace{-6.5pt}
+
+\section*{Achievements}
+\textbf{Led migration to AWS with Infrastructure as Code:} Moved legacy services to AWS using Terraform, reducing infrastructure costs by 30\%.
+\begin{itemize}
+    \item Action: Migrated legacy services to AWS
+    \item Context: Implemented Infrastructure as Code with Terraform
+    \item Result: Reduced infrastructure costs by 30\%
+\end{itemize}
+
+\textbf{Developed and maintained a high-traffic web application:} Built and maintained a React-based web application using Node.js and Express, ensuring high availability and performance.
+\begin{itemize}
+    \item Action: Developed and maintained a high-traffic web application
+    \item Context: Utilized React, Node.js, and Express
+    \item Result: Ensured high availability and performance
+\end{itemize}
+
+\textbf{Optimized database queries for improved performance:} Identified and optimized slow-running SQL queries, reducing query execution time by 50\%.
+\begin{itemize}
+    \item Action: Identified and optimized slow-running SQL queries
+    \item Context: Analyzed database performance using SQL profiling tools
+    \item Result: Reduced query execution time by 50\%
+\end{itemize}
+
+\textbf{Implemented CI/CD pipeline for automated deployments:} Set up a CI/CD pipeline using Jenkins and Docker, enabling automated deployments and reducing deployment time by 75\%.
+\begin{itemize}
+    \item Action: Set up a CI/CD pipeline
+    \item Context: Utilized Jenkins, Docker, and Kubernetes
+    \item Result: Reduced deployment time by 75\%
+\end{itemize}
+
+\textbf{Collaborated with cross-functional teams to deliver projects on time:} Worked closely with product managers, designers, and other developers to deliver projects on time and within budget.
+\begin{itemize}
+    \item Action: Collaborated with cross-functional teams
+    \item Context: Communicated effectively and managed project timelines
+    \item Result: Delivered projects on time and within budget
+\end{itemize}
+
+\vspace{-18.5pt}
+
+\section*{Projects}
+\textbf{Project Title: High-Traffic Web Application} \hfill \href{https://github.com/jane-doe/high-traffic-web-app}{github.com/jane-doe/high-traffic-web-app}
+\begin{itemize}
+    \item Developed a high-traffic web application using React, Node.js, and Express
+    \item Implemented Infrastructure as Code with Terraform for AWS deployment
+    \item Optimized database queries for improved performance
+\end{itemize}
+
+\textbf{Project Title: CI/CD Pipeline} \hfill \href{https://github.com/jane-doe/ci-cd-pipeline}{github.com/jane-doe/ci-cd-pipeline}
+\begin{itemize}
+    \item Set up a CI/CD pipeline using Jenkins and Docker
+    \item Automated deployments and reduced deployment time by 75\%
+    \item Implemented Kubernetes for container orchestration
+\end{itemize}
+
+\vspace{-18.5pt}
 
 \section*{Education}
-\textbf{Bachelor of Science in Computer Science} at University of Sussex \hfill 2023-09–2027-05 \\
-GPA: 4.0/4.0 | First Class
+\textbf{School} -- PhD in Computer Science \hfill June 2015 \\
+\textbf{School} -- MS in Computer Science \hfill June 2012 \\
+\textbf{School} -- BS in Computer Science \hfill Apr 2009
 
-\textbf{Bachelor of Technology in Computer Engineering} at PES University \hfill 2022-09–\section*{Certifications}
-\textbf{AWS Cloud Technical Essentials} -- Amazon Web Services (AWS), Coursera \hfill 2025-06 \
-\href{https://www.coursera.org/account/accomplishments/verify/C3YCI8CHHD3N}{Certificate Link} \
-\textbf{Introduction to Parallel Programming with CUDA} -- The Johns Hopkins University, Coursera \hfill 2025-06 \
-\href{https://www.coursera.org/account/accomplishments/verify/CRPQY30R9U8C}{Certificate Link} \
-\textbf{Introduction to Concurrent Programming with GPUs} -- The Johns Hopkins University, Coursera \hfill 2025-06 \
-\href{https://www.coursera.org/account/accomplishments/verify/YSDSWS0ZHXQT}{Certificate Link} \
-\textbf{Unsupervised Learning, Recommenders, Reinforcement Learning} -- DeepLearning.AI, Coursera, Stanford CPD, UVM \hfill 2024-10 \
-\href{https://www.coursera.org/account/accomplishments/verify/WG2EZCYHS2OU}{Certificate Link} \
-\textbf{Advanced Learning Algorithms} -- DeepLearning.AI, Coursera, Stanford CPD, UVM \hfill 2024-08 \
-\href{https://www.coursera.org/account/accomplishments/verify/PFCUO3JNTWH4}{Certificate Link} \
-\textbf{Supervised Machine Learning: Regression and Classification} -- DeepLearning.AI, Coursera, Stanford CPD, UVM \hfill 2024-07 \
-\href{https://www.coursera.org/account/accomplishments/verify/5ZYEBTVX33KK}{Certificate Link} \
+\vspace{-18.5pt}
+
+\section*{Certifications}
+\textbf{Certification Name} -- Issuer \hfill Date
+\href{https://certificate-link.com}{Certificate Link},
 
 \end{document}
