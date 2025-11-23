@@ -35,7 +35,7 @@ def get_iam_token() -> str:
     return _cached_token
 
 
-def generate(prompt: str, max_tokens: int = 600, temperature: float = 0.2) -> str:
+def generate(prompt: str, max_tokens: int = 2048, temperature: float = 0.2) -> str:
     if not API_KEY or not PROJECT_ID:
         raise RuntimeError("Missing IBM Watsonx credentials (API_KEY / PROJECT_ID)")
     
@@ -75,7 +75,7 @@ def generate(prompt: str, max_tokens: int = 600, temperature: float = 0.2) -> st
     return data["results"][0]["generated_text"]
 
 
-def generate_with_model(prompt: str, model_id: str, max_tokens: int = 600, temperature: float = 0.2) -> str:
+def generate_with_model(prompt: str, model_id: str, max_tokens: int = 2048, temperature: float = 0.2) -> str:
     """Generate text with a specific model ID"""
     if not API_KEY or not PROJECT_ID:
         raise RuntimeError("Missing IBM Watsonx credentials (API_KEY / PROJECT_ID)")
@@ -113,7 +113,6 @@ def generate_with_model(prompt: str, model_id: str, max_tokens: int = 600, tempe
 
 
 def safe_generate(prompt: str) -> Optional[str]:
-    # Try multiple Granite model IDs
     alternative_models = [
         "ibm/granite-3-8b-instruct",
         "ibm/granite-13b-instruct-v2",
@@ -121,11 +120,10 @@ def safe_generate(prompt: str) -> Optional[str]:
         "ibm/granite-20b-multilingual",
         "meta-llama/llama-3-70b-instruct",
     ]
-    
     for model_id in alternative_models:
         try:
             print(f"[INFO] Trying model: {model_id}")
-            result = generate_with_model(prompt, model_id)
+            result = generate_with_model(prompt, model_id, max_tokens=2048)
             print(f"[SUCCESS] Model {model_id} worked!")
             return result
         except Exception as e:

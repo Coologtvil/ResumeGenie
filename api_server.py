@@ -15,6 +15,10 @@ from db.persist import upsert_jobs, save_application
 
 app = FastAPI(title="ResumeGenie API")
 
+# Serve static files (PDFs, etc.) from project root
+from fastapi.staticfiles import StaticFiles
+app.mount("/static", StaticFiles(directory="."), name="static")
+
 # Allow Next.js (port 3000) to talk to Python (port 8000)
 app.add_middleware(
     CORSMiddleware,
@@ -67,7 +71,16 @@ def generate_application(job_id: str, db: Session = Depends(get_session)):
     
     # Save to DB
     pkg_id = save_application(db, job_id, resume, cheat, "user@example.com", 0)
-    return {"status": "Generated", "package_id": pkg_id, "resume": resume}
+    # For preview, use resume as markdown/text
+    preview_md = resume if isinstance(resume, str) else str(resume)
+    # For PDF download, assume PDF is saved as resume_{job_id}.pdf in working dir
+    pdf_url = f"/static/resume_{job_id}.pdf"
+    return {
+        "status": "Generated",
+        "package_id": pkg_id,
+        "preview_md": preview_md,
+        "pdf_url": pdf_url
+    }
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
